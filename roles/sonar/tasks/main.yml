@@ -46,7 +46,7 @@
   service: name=sonar state=started enabled=yes
 
 - name: Allow Sonar time to build on first start.
-  pause: seconds=180
+  pause: seconds=60
   when: sonar_symlink.changed
 
 - name: Make sure Sonar is responding on the configured port.
